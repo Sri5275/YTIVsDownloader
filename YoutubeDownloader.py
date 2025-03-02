@@ -10,17 +10,18 @@ class VideoDownloaderThread(QThread):
     finished_signal = pyqtSignal(str)
     progress_signal = pyqtSignal(int)
 
-    def __init__(self, url, quality, ffmpeg_location, parent=None):
+    def __init__(self, url, quality, ffmpeg_location, download_path, parent=None):
         super().__init__(parent)
         self.url = url
         self.quality = quality
         self.ffmpeg_location = ffmpeg_location
+        self.download_path = download_path
 
     def run(self):
         format_option = self.get_format_option(self.url, self.quality)
         
         ydl_opts = {
-            'outtmpl': os.path.join(os.getcwd(), '%(title)s.%(ext)s'),
+            'outtmpl': os.path.join(self.download_path, '%(title)s.%(ext)s'),
             'progress_hooks': [self.progress_hook],
             'format': format_option,
             'ffmpeg_location': self.ffmpeg_location,
@@ -61,7 +62,7 @@ class VideoDownloaderApp(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Video Downloader")
-        self.setGeometry(100, 100, 400, 250)
+        self.setGeometry(100, 100, 400, 300)
 
         logo_path = "F:\\Coding\\Python\\Youtube Downloader\\YoutubeDownloaderLogo.png"
 
@@ -80,6 +81,12 @@ class VideoDownloaderApp(QWidget):
         self.quality_combo = QComboBox()
         self.quality_combo.addItems(["360p", "480p", "720p", "1080p", "Best Available"])
 
+        self.folder_label = QLabel("Select Download Folder:")
+        self.folder_path_display = QLineEdit()
+        self.folder_path_display.setReadOnly(True)
+        self.folder_button = QPushButton("Select Folder")
+        self.folder_button.clicked.connect(self.select_folder)
+
         self.download_button = QPushButton("Download Video")
         self.progress_bar = QProgressBar(self)
         self.progress_bar.setAlignment(Qt.AlignCenter)
@@ -89,12 +96,23 @@ class VideoDownloaderApp(QWidget):
         layout.addWidget(self.url_input)
         layout.addWidget(self.quality_label)
         layout.addWidget(self.quality_combo)
+        layout.addWidget(self.folder_label)
+        layout.addWidget(self.folder_path_display)
+        layout.addWidget(self.folder_button)
         layout.addWidget(self.download_button)
         layout.addWidget(self.progress_bar)
 
         self.setLayout(layout)
+        self.download_path = os.getcwd()  # Default to current working directory
+        self.folder_path_display.setText(self.download_path)
 
         self.download_button.clicked.connect(self.start_download)
+
+    def select_folder(self):
+        folder = QFileDialog.getExistingDirectory(self, "Select Download Folder")
+        if folder:
+            self.download_path = folder
+            self.folder_path_display.setText(folder)
 
     def start_download(self):
         url = self.url_input.text()
@@ -108,7 +126,7 @@ class VideoDownloaderApp(QWidget):
         if ffmpeg_location is None:
             return
 
-        self.download_thread = VideoDownloaderThread(url, quality, ffmpeg_location)
+        self.download_thread = VideoDownloaderThread(url, quality, ffmpeg_location, self.download_path)
         self.download_thread.finished_signal.connect(self.on_download_finished)
         self.download_thread.progress_signal.connect(self.update_progress)
         self.download_thread.start()
