@@ -44,7 +44,11 @@ pip install yt-dlp PyQt5
 ```
 
 ## 🎥 Screenshots  
-*(Add relevant screenshots of your GUI here)*  
+![image](https://github.com/user-attachments/assets/5a195e86-823c-4d1e-8c0f-8fbad95febf2)
+![image](https://github.com/user-attachments/assets/cb7a9f0d-93a0-4a90-86f4-c0574914db2b)
+
+
+
 
 ## 🏗️ How It Works  
 1. **Enter Video URL** (YouTube or Instagram).  
