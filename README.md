@@ -44,17 +44,16 @@ pip install yt-dlp PyQt5
 ```
 
 ## 🎥 Screenshots  
-![image](https://github.com/user-attachments/assets/5a195e86-823c-4d1e-8c0f-8fbad95febf2)
-![image](https://github.com/user-attachments/assets/cb7a9f0d-93a0-4a90-86f4-c0574914db2b)
-
+![image](https://github.com/user-attachments/assets/2f42f0fc-047e-46c5-8ecb-5e3ace36bd74)
+![image](https://github.com/user-attachments/assets/3331ab42-74ec-4771-9bfc-3ca3a2b80bae)
 
 
 
 ## 🏗️ How It Works  
 1. **Enter Video URL** (YouTube or Instagram).  
-2. **Choose Quality** (for YouTube).  
+2. **Choose Quality** (for YouTube) and **Best Quality** is chosen default for Instagram.  
 3. **Click Download** – The progress bar updates in real-time.  
-4. **Video is saved** in the current directory.  
+4. **Video is saved** in the selected folder.  
 
 ## ⚠️ Notes  
 - FFmpeg must be installed and accessible via the system's PATH.  
