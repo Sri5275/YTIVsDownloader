@@ -1,5 +1,5 @@
 
-# 📥 Video Downloader (YouTube & Instagram)  
+# 📥 YTIVs Video Downloader (YouTube & Instagram)  
 
 A **PyQt5-based** GUI application that allows you to download videos from **YouTube** and **Instagram** with ease.  
 - ✅ **YouTube:** Choose the preferred video quality (360p, 480p, 720p, 1080p, or Best Available).  
@@ -61,6 +61,9 @@ pip install yt-dlp PyQt5
 - Instagram downloads are always in the best available quality.  
 - Ensure that the provided URL is valid.  
 
+## ⚠️ Disclaimer  
+- This project is **strictly for educational purposes only**. Downloading videos from YouTube or Instagram without permission may **violate their terms of service and copyright laws**.  
+- **Do not encourage or support piracy**—use this tool responsibly and only for content you own or have permission to download.  
 ## 🤝 Contributing  
 Contributions are welcome! Feel free to **fork** the repo and submit a PR.  
 
