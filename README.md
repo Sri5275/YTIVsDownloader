@@ -33,7 +33,7 @@ python main.py
 ```
 
 ## 🛠️ Requirements  
-- **Python 3.x**  
+- **Python 3.x**  (Recommended: 3.8+)
 - **FFmpeg** (Ensure it's installed and added to the system PATH)  
 - **Dependencies:** Install via `requirements.txt`  
 
