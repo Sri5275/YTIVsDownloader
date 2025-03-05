@@ -1,25 +1,36 @@
+# 📥 YTIVs Advanced Video Downloader
 
-# 📥 YTIVs Video Downloader (YouTube & Instagram)  
-
-A **PyQt5-based** GUI application that allows you to download videos from **YouTube** and **Instagram** with ease.  
-- ✅ **YouTube:** Choose the preferred video quality (360p, 480p, 720p, 1080p, or Best Available).  
-- ✅ **Instagram:** Automatically downloads in the **best available quality**.  
-- ✅ **FFmpeg Integration:** Ensures seamless conversion and processing.  
-- ✅ **Progress Bar:** Tracks real-time download progress.  
+A **PyQt5-based** GUI application that allows you to download videos from **YouTube** and **Instagram** with advanced features and user-friendly interface.
 
 ## 🚀 Features  
-- **YouTube Video Download** – Select quality before downloading.  
-- **Instagram Video Download** – Always fetches the best quality.  
-- **User-Friendly GUI** – Built using PyQt5.  
-- **Error Handling** – Provides alerts for invalid URLs or missing dependencies.  
-- **Automatic FFmpeg Detection** – Ensures proper conversion support.  
+- **Multi-Platform Support**
+  - **YouTube Video Download** – Select custom quality (360p, 480p, 720p, 1080p, Best Available)
+  - **Instagram Video Download** – Automatically fetches best available quality
+  - **Other Platform Support** – Basic download for various video sources
+
+- **Advanced Download Options**
+  - Video quality selection
+  - Subtitle download option
+  - Thumbnail extraction
+  - Recent URL history
+
+- **Metadata Extraction**
+  - View video details before downloading
+  - See video title, uploader, duration, and view count
+
+- **User Experience**
+  - Modern, intuitive PyQt5 interface
+  - Real-time download progress tracking
+  - Download speed display
+  - Folder selection
+  - Error handling and user notifications
 
 ## 🖥️ Installation  
 
 ### 1️⃣ Clone the Repository  
 ```bash
-git clone https://github.com/your-username/video-downloader.git
-cd video-downloader
+git clone https://github.com/your-username/ytivs-video-downloader.git
+cd ytivs-video-downloader
 ```
 
 ### 2️⃣ Install Dependencies  
@@ -32,43 +43,62 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## 🛠️ Requirements  
-- **Python 3.x**  (Recommended: 3.8+)
-- **FFmpeg** (Ensure it's installed and added to the system PATH)  
-- **Dependencies:** Install via `requirements.txt`  
+## 🛠️ System Requirements  
+- **Python 3.8+**
+- **FFmpeg** (Must be installed and added to system PATH)
+- **Operating Systems:** Windows, macOS, Linux
 
-## 📌 Dependencies  
-Install manually if needed:  
+## 📦 Dependencies  
 ```bash
 pip install yt-dlp PyQt5
 ```
 
-## 🎥 Screenshots  
-![image](https://github.com/user-attachments/assets/2f42f0fc-047e-46c5-8ecb-5e3ace36bd74)
-![image](https://github.com/user-attachments/assets/3331ab42-74ec-4771-9bfc-3ca3a2b80bae)
+### Optional Dependencies
+- `ffmpeg` (for video conversion)
 
+## 🎥 Application Workflow  
+1. **Enter Video URL**
+   - Supports YouTube, Instagram, and other platforms
+   - Automatic URL validation
 
+2. **Explore Video Metadata**
+   - View video details in the Info tab
+   - See title, uploader, duration, view count
 
-## 🏗️ How It Works  
-1. **Enter Video URL** (YouTube or Instagram).  
-2. **Choose Quality** (for YouTube) and **Best Quality** is chosen default for Instagram.  
-3. **Click Download** – The progress bar updates in real-time.  
-4. **Video is saved** in the selected folder.  
+3. **Customize Download**
+   - Select video quality
+   - Choose additional options (subtitles, thumbnails)
+   - Pick download location
 
-## ⚠️ Notes  
-- FFmpeg must be installed and accessible via the system's PATH.  
-- Instagram downloads are always in the best available quality.  
-- Ensure that the provided URL is valid.  
+4. **Download**
+   - Real-time progress tracking
+   - Download speed display
+   - Error handling for failed downloads
 
-## ⚠️ Disclaimer  
-- This project is **strictly for educational purposes only**. Downloading videos from YouTube or Instagram without permission may **violate their terms of service and copyright laws**.  
-- **Do not encourage or support piracy**—use this tool responsibly and only for content you own or have permission to download.  
+## 🌟 Key Highlights
+- Concurrent video fragment downloading
+- Multi-core video conversion
+- Error-resilient download process
+- Clean, modern UI design
+
+## ⚠️ Responsible Use Disclaimer  
+- This tool is for **educational purposes only**
+- Respect copyright laws and platform terms of service
+- Only download content you have rights to access
+
 ## 🤝 Contributing  
-Contributions are welcome! Feel free to **fork** the repo and submit a PR.  
+Contributions are welcome! 
+- Fork the repository
+- Create a feature branch
+- Submit a pull request
 
 ## 📜 License  
-This project is licensed under the **MIT License**.  
+MIT License
+
+## 🔗 Additional Resources
+- [yt-dlp Documentation](https://github.com/yt-dlp/yt-dlp)
+- [PyQt5 Guide](https://www.riverbankcomputing.com/static/Docs/PyQt5/)
 
 ---
 
-Let me know if you need any modifications! 🚀
+**Happy Downloading! 🎉**
