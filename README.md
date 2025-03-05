@@ -30,7 +30,7 @@ A **PyQt5-based** GUI application that allows you to download videos from **YouT
 ### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/Sri5275/YTIVsDownloader
-cd ytivs-video-downloader
+cd YTIVsDownloader
 ```
 
 ### 2️⃣ Install Dependencies  
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ### 3️⃣ Run the Application  
 ```bash
-python main.py
+python YoutubeDownloader.py
 ```
 
 ## 🛠️ System Requirements  
