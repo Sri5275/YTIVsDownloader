@@ -162,7 +162,7 @@ class VideoDownloaderApp(QWidget):
 
     def _setup_ui(self):
         """Setup the main user interface."""
-        self.setWindowTitle("YTIVs Advanced Video Downloader")
+        self.setWindowTitle("YTIV's Advanced Video Downloader")
         self.setGeometry(100, 100, 600, 500)
         self._set_app_icon()
 
