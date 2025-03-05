@@ -397,9 +397,11 @@ def main():
     
     # Set application-wide style
     app.setStyle('Fusion')  # Modern, cross-platform look
-    
+    app.setWindowIcon(QIcon("icon.ico"))
     # Create and show the main window
+
     window = VideoDownloaderApp()
+
     window.show()
     
     # Run the application event loop
