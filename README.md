@@ -29,7 +29,7 @@ A **PyQt5-based** GUI application that allows you to download videos from **YouT
 
 ### 1️⃣ Clone the Repository  
 ```bash
-git clone https://github.com/your-username/ytivs-video-downloader.git
+git clone https://github.com/Sri5275/YTIVsDownloader
 cd ytivs-video-downloader
 ```
 
