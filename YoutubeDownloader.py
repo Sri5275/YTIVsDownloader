@@ -315,9 +315,8 @@ class VideoDownloaderApp(QWidget):
     def _set_app_icon(self):
         """Set application icon."""
         try:
-            logo_path = os.path.join(os.path.dirname(__file__), "YoutubeDownloaderLogo.png")
-            app_icon = QIcon(logo_path)
-            self.setWindowIcon(app_icon)
+            self.setWindowIcon(QIcon("icon.ico"))  # Set window icon
+            self.setGeometry(100, 100, 800, 600)  # Set window size
         except Exception as e:
             print(f"Icon loading error: {e}")
 
